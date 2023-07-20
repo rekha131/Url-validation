@@ -1,0 +1,28 @@
+package interview;
+import java.util.Random;
+import java.util.Scanner;
+public class Number {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		Random random=new Random();
+		int rd=random.nextInt(500)*2-1;
+		int maxattempt=3;
+		int att=0;
+		System.out.println("generated the random odd number 1 to 999");
+		while(att<maxattempt) {
+			System.out.println("enter the checking numer");
+			int check=sc.nextInt();
+			if(check<rd) {
+				System.out.println("too low");
+			}
+			else if(check>rd) {
+				System.out.println("too high");
+			}
+			else if(check==rd) {
+				System.out.println("correct");
+			}
+			att++;
+		}
+	}
+}
